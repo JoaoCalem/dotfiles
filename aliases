@@ -4,3 +4,8 @@ alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 
 # Quickly serve the current directory as HTTP
 alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
+
+# Screen
+alias screen-start-new='read "a?Session Name: "; if [ "$a" != "" ]; then screen -S $a; fi'
+alias screen-quit='screen -X quit'
+alias screen-start-existing='screen -ls;read "a?Session Name: "; if [ "$a" != "" ]; then screen -d -r $a; fi'
